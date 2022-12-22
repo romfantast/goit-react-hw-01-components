@@ -1,9 +1,9 @@
+import { color, space } from 'styled-system';
+import styled from 'styled-components';
 import { Box } from 'components/Box/Box';
 import { StatsList } from 'components/Profile/UserProfile';
 import css from './Statistics.module.css';
-import { color } from 'styled-system';
 
-import styled from 'styled-components';
 const randomColor = () => '#' + (((1 << 24) * Math.random()) | 0).toString(16);
 
 const StatsItem = styled.li`
@@ -13,6 +13,7 @@ const StatsItem = styled.li`
   align-items: center;
   row-gap: 8px;
   ${color}
+  ${space}
 `;
 
 export const Statistics = ({ title, stats }) => {
@@ -27,11 +28,7 @@ export const Statistics = ({ title, stats }) => {
         flexWrap="wrap"
       >
         {stats.map(stat => (
-          <StatsItem
-            className={css.item}
-            key={stat.id}
-            backgroundColor={randomColor()}
-          >
+          <StatsItem key={stat.id} backgroundColor={randomColor()}>
             <span className="label">{stat.label}</span>
             <span className="percentage">{stat.percentage}%</span>
           </StatsItem>
