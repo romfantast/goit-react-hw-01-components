@@ -1,0 +1,13 @@
+.tableRow {
+  height: 30px;
+}
+.whiteBg {
+  text-align: center;
+  height: 50px;
+  background-color: white;
+}
+.grayBg {
+  text-align: center;
+  height: 50px;
+  background-color: rgb(166, 163, 163);
+}
