@@ -1,4 +1,5 @@
 import css from './FriendListItem.module.css';
+
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   console.log(isOnline);
   return (

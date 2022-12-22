@@ -8,5 +8,6 @@ export const Box = styled.div`
   border-radius: 8px;
   margin: 20px auto;
   background-color: #cccaca;
+  border-collapse: collapse;
   ${color}, ${space}, ${layout}, ${borderRadius}, ${border};
 `;

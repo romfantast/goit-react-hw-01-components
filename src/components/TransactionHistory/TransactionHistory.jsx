@@ -1,6 +1,7 @@
 import { Box } from 'components/Box/Box';
 import { TransactionsHistoryItem } from 'components/TransactionsHistoryItem/TransactionsHistoryItem';
 import css from './TransactionHistory.module.css';
+
 export const TransactionHistory = ({ transactions }) => {
   return (
     <Box as="table">

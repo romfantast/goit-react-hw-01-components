@@ -1,6 +1,6 @@
-import { Box } from 'components/Box/Box';
-import styled from 'styled-components';
 import { color, space, layout, flexbox, border } from 'styled-system';
+import styled from 'styled-components';
+import { Box } from 'components/Box/Box';
 import { theme } from 'theme';
 import css from './UserProfile.module.css';
 

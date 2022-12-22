@@ -5,6 +5,12 @@
   width: 150px;
   margin: 0 auto;
 }
+h2 {
+  margin: 0;
+  height: 70px;
+  display: grid;
+  place-items: center;
+}
 p {
   color: rgb(112, 102, 102);
   text-align: center;
