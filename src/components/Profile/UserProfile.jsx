@@ -1,44 +1,31 @@
-import { color, space, layout, flexbox, border } from 'styled-system';
-import styled from 'styled-components';
-import { Box } from 'components/Box/Box';
-import { theme } from 'theme';
-import css from './UserProfile.module.css';
-
-export const StatsList = styled.ul`
-  list-style: none;
-  margin: 0 auto;
-  padding: ${props => props.theme.space[0]};
-  ${color}
-  ${space}
-  ${layout}
-  ${flexbox}
-  ${border}
-`;
+import {
+  Box,
+  Wrapper,
+  Image,
+  Paragraph,
+  UserStatsItem,
+  Text,
+  StatsList,
+} from 'styledComponents/styledComponents.styled';
+import { makeFirstLetterToUpperCase } from 'components/TransactionsHistoryItem/makeFirstLetterToUpperCase';
 
 export const UserProfile = ({ username, tag, location, avatar, stats }) => {
   const userStats = Object.entries(stats);
   return (
-    <Box
-      bg={theme.colors.background}
-      width={0.2}
-      p={4}
-      mx="auto"
-      mt="20px"
-      borderRadius={8}
-    >
-      <div className={css.description}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <Box>
+      <Wrapper m={4}>
+        <Image src={avatar} alt="User avatar" width={150} mx="auto" />
+        <Paragraph>{username}</Paragraph>
+        <Paragraph>@{tag}</Paragraph>
+        <Paragraph>{location}</Paragraph>
+      </Wrapper>
 
       <StatsList display="flex" justifyContent="center" alignItems="center">
         {userStats.map((stat, index) => (
-          <li key={index} className={css.listItem}>
-            <span className={css.label}>{stat[0]}</span>
-            <span className={css.quantity}>{stat[1]}</span>
-          </li>
+          <UserStatsItem key={index}>
+            <Text fontWeight="bold">{makeFirstLetterToUpperCase(stat[0])}</Text>
+            <Text>{stat[1]}</Text>
+          </UserStatsItem>
         ))}
       </StatsList>
     </Box>

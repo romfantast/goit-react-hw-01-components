@@ -1,29 +1,36 @@
-import { Box } from 'components/Box/Box';
 import { TransactionsHistoryItem } from 'components/TransactionsHistoryItem/TransactionsHistoryItem';
-import css from './TransactionHistory.module.css';
+import { Box } from 'styledComponents/styledComponents.styled';
+import {
+  TableBody,
+  TableHead,
+  TableHeaders,
+  TableHeadersRow,
+} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
-    <Box as="table">
-      <thead className={css.tableHead}>
-        <tr className={css.tableHeadRow}>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+    <Box>
+      <Box as="table" table="table">
+        <TableHead>
+          <TableHeadersRow>
+            <TableHeaders>Type</TableHeaders>
+            <TableHeaders>Amount</TableHeaders>
+            <TableHeaders>Currency</TableHeaders>
+          </TableHeadersRow>
+        </TableHead>
 
-      <tbody>
-        {transactions.map((transaction, index) => (
-          <TransactionsHistoryItem
-            type={transaction.type}
-            amount={transaction.amount}
-            currency={transaction.currency}
-            key={transaction.id}
-            index={index}
-          />
-        ))}
-      </tbody>
+        <TableBody>
+          {transactions.map((transaction, index) => (
+            <TransactionsHistoryItem
+              type={transaction.type}
+              amount={transaction.amount}
+              currency={transaction.currency}
+              key={transaction.id}
+              index={index}
+            />
+          ))}
+        </TableBody>
+      </Box>
     </Box>
   );
 };

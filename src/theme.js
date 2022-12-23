@@ -6,7 +6,6 @@ export const theme = {
     violet: '#c23beb',
     red: '#f72568',
     aqua: '#25f7e9',
-    background: '#cccaca',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
