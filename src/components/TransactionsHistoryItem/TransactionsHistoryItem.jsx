@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   TableData,
   TableRow,
@@ -12,4 +13,11 @@ export const TransactionsHistoryItem = ({ type, amount, currency, index }) => {
       <TableData>{currency}</TableData>
     </TableRow>
   );
+};
+
+TransactionsHistoryItem.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };

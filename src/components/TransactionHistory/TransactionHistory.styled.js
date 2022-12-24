@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 const TableHead = styled.thead`
   height: 30px;
@@ -17,6 +18,11 @@ const TableData = styled.td`
   height: 40px;
 `;
 
+//  ============= PropTypes ============= //
+TableRow.propTypes = {
+  index: PropTypes.number.isRequired,
+};
+//  ============= PropTypes ============= //
 export {
   TableHead,
   TableHeaders,

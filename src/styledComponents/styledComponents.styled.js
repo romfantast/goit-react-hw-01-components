@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   flexbox,
@@ -100,6 +101,15 @@ const Indicator = styled.span`
   border-radius: ${props => props.theme.borderRadius.round};
   background-color: ${({ isOnline }) => (isOnline ? 'green' : 'red')};
 `;
+
+// ========== PropTypes ========== //
+Image.propTypes = {
+  src: PropTypes.string.isRequired,
+};
+Indicator.propTypes = {
+  isOnline: PropTypes.bool.isRequired,
+};
+// ========== PropTypes ========== //
 
 export {
   Box,
