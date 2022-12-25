@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box } from '../../styledComponents/styledComponents.styled';
+import { Box } from '../styledComponents/styledComponents.styled';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 
 export const FriendList = ({ friends }) => {

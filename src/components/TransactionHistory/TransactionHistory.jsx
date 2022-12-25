@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { TransactionsHistoryItem } from 'components/TransactionsHistoryItem/TransactionsHistoryItem';
-import { Box } from 'styledComponents/styledComponents.styled';
+import { Box } from 'components/styledComponents/styledComponents.styled';
 import {
   TableBody,
   TableHead,

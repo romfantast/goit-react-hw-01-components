@@ -7,7 +7,7 @@ import {
   UserStatsItem,
   Text,
   StatsList,
-} from 'styledComponents/styledComponents.styled';
+} from 'components/styledComponents/styledComponents.styled';
 import { makeFirstLetterToUpperCase } from 'components/TransactionsHistoryItem/makeFirstLetterToUpperCase';
 
 export const UserProfile = ({ username, tag, location, avatar, stats }) => {

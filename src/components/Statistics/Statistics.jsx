@@ -6,7 +6,7 @@ import {
   Heading,
   StatsList,
   StatsItem,
-} from 'styledComponents/styledComponents.styled';
+} from 'components/styledComponents/styledComponents.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (

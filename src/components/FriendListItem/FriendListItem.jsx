@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import {
   Friend,
-  Indicator,
+  UserStatusIndicator,
   Image,
   Paragraph,
-} from 'styledComponents/styledComponents.styled';
+} from 'components/styledComponents/styledComponents.styled';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <Friend>
-      <Indicator isOnline={isOnline}></Indicator>
+      <UserStatusIndicator isOnline={isOnline}></UserStatusIndicator>
       <Image src={avatar} alt="User avatar" width="60" />
       <Paragraph>{name}</Paragraph>
     </Friend>

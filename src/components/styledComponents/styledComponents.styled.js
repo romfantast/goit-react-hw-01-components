@@ -95,7 +95,7 @@ const Friend = styled.li`
     margin-bottom: 20px;
   }
 `;
-const Indicator = styled.span`
+const UserStatusIndicator = styled.span`
   width: 10px;
   height: 10px;
   border-radius: ${props => props.theme.borderRadius.round};
@@ -106,7 +106,7 @@ const Indicator = styled.span`
 Image.propTypes = {
   src: PropTypes.string.isRequired,
 };
-Indicator.propTypes = {
+UserStatusIndicator.propTypes = {
   isOnline: PropTypes.bool.isRequired,
 };
 // ========== PropTypes ========== //
@@ -122,5 +122,5 @@ export {
   StatsList,
   StatsItem,
   Friend,
-  Indicator,
+  UserStatusIndicator,
 };
